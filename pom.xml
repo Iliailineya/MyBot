@@ -32,17 +32,27 @@
             <version>3.12.12</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.32</version>
+        </dependency>
         <!-- Other dependencies -->
         <!-- ... -->
     </dependencies>
 
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>mongodb-repo</id>-->
-<!--            <name>MongoDB Repository</name>-->
-<!--            <url>https://repo.mongodb.org/maven2</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <id>mongodb-repo</id>
+            <name>MongoDB Repository</name>
+            <url>https://repo.mongodb.org/maven2</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
