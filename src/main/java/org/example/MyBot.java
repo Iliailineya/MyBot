@@ -9,11 +9,12 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MyBot extends TelegramLongPollingBot {
-    final private String BOT_NAME = "office_daily_duty_bot";
-    final private String BOT_TOKEN = "6030371814:AAGXmnDxBH6wX1y9X1GR-0spLx2505_lTDQ";
     Storage storage;
     ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
 
@@ -82,11 +83,36 @@ public class MyBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
+        FileReader fr;
+        String BOT_NAME;
+        try {
+            fr = new FileReader("C:\\Users\\user\\IdeaProjects\\MyBot\\src\\main\\java\\org\\example\\BOT_NAME");
+            Scanner scan = new Scanner(fr);
+            BOT_NAME= scan.nextLine();
+
+            fr.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         return BOT_NAME;
     }
 
     @Override
     public String getBotToken() {
+        FileReader fr;
+        String BOT_TOKEN;
+        try {
+            fr = new FileReader("C:\\Users\\user\\IdeaProjects\\MyBot\\src\\main\\java\\org\\example\\BOT_TOKEN");
+            Scanner scan = new Scanner(fr);
+            BOT_TOKEN= scan.nextLine();
+
+            fr.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
         return BOT_TOKEN;
     }
 }

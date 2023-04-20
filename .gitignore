@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+
+/src/main/java/org/example/BOT_NAME
+/src/main/java/org/example/BOT_TOKEN
